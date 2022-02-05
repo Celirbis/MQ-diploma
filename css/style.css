@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  border-radius: 0;
 }
 
 .visually-hidden {
@@ -669,8 +670,7 @@ textarea.field {
 }
 
 /* для карточек трендов в четыре колонки */
-@media (min-width: 1200px), 
-       (min-width: 641px) and (max-width: 1199px) and (orientation: landscape) {
+@media (min-width: 1200px) {
 
   .trend-card-wrapper:nth-child(n+2) {
     margin-left: 4px;
@@ -737,34 +737,6 @@ textarea.field {
   }
 }
 
-/* для карточек трендов в две колонки */
-@media (min-width: 641px) and (max-width: 1199px) and (orientation: portrait),
-       (max-width: 640px) and (orientation: landscape) {
-
-  .trend-card-wrapper {
-    flex-basis: 49%;
-    flex-grow: 1;
-    height: 247px;
-    padding: 15px 19px;
-    margin-top: 0; 
-    margin-bottom: 4px;
-  }
-
- .trend-card-wrapper:nth-child(2n+1) {
-    margin-right: 4px;
-  }
-
-  .trends {
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-
-  .trend-card {
-    padding: 29px 29px;
-  }
-
-}
-
 @media (min-width: 641px) and (max-width: 1199px) {
 
   .header-content, .main-wrapper, .footer {
@@ -791,16 +763,35 @@ textarea.field {
     margin-top: 45px;
   }
 
+  .trend-card-wrapper {
+    flex-basis: 49%;
+    flex-grow: 1;
+    height: 247px;
+    padding: 15px 19px;
+    margin-top: 0; 
+    margin-bottom: 4px;
+  }
+
+ .trend-card-wrapper:nth-child(2n+1) {
+    margin-right: 4px;
+  }
+
+  .trends {
+    margin-top: 18px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .trend-card {
+    padding: 29px 29px;
+  }
+
   .main-section-title {
     font-size: 18px;
   }
 
   .underline:after {
     margin: 10px auto 0 auto;
-  }
-
-  .trends {
-    margin-top: 18px;
   }
 
   .trend-title {
